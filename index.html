@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ScanJS Documentation</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #333; }
+        code { background: #eee; padding: 2px 5px; border-radius: 4px; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>ScanJS Documentation</h1>
+
+    <h2>Introduction</h2>
+    <p>ScanJS is a lightweight JavaScript library to scan QR codes from images using drag and drop. It copies the QR code data directly to your clipboard.</p>
+
+    <h2>Methods</h2>
+
+    <h3><code>load.SCANJS()</code></h3>
+    <p><strong>-- meaning:</strong> Loads the main ScanJS script and prepares it for scanning.</p>
+
+    <h3><code>enable.drag.n.drop = true</code></h3>
+    <p><strong>-- meaning:</strong> Enables drag and drop support for image QR code scanning.</p>
+
+    <h3><code>start.scan('qr.code', 'image-name')</code></h3>
+    <p><strong>-- meaning:</strong> Starts scanning the QR code in the dragged or selected image. Automatically copies the result to clipboard.</p>
+
+    <h3><code>finish.scan('qr.code')</code></h3>
+    <p><strong>-- meaning:</strong> Ends the scanning session. Useful for cleanup or UI updates.</p>
+
+    <h3><code>debug.fetch(SCANJS)</code></h3>
+    <p><strong>-- meaning:</strong> Debug tool to check if the ScanJS script is loaded properly.</p>
+
+    <h2>Example Usage</h2>
+    <pre>
+&lt;script src="scanjs.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    ScanJS.load.SCANJS();          // Load ScanJS
+    ScanJS.enable["drag.n.drop"] = true;  // Enable drag and drop
+    ScanJS.start.scan('qr.code', 'myQR'); // Scan QR code from image
+    ScanJS.finish.scan('qr.code');       // Finish scanning
+&lt;/script&gt;
+    </pre>
+
+</body>
+</html>
